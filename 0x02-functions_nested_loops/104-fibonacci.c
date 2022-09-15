@@ -9,13 +9,13 @@ int main(void)
 {
 	int i;
 
-	long int fibonacci[98];
+	long double fibonacci[98];
 
 	fibonacci[0] = 1;
 
 	fibonacci[1] = 2;
 
-	printf("%ld, %ld, ", fibonacci[0], fibonacci[1]);
+	printf("%LA, %LA, ", fibonacci[0], fibonacci[1]);
 
 
 
@@ -26,10 +26,10 @@ int main(void)
 		fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
 
 		if (i == 98)
-			printf("%ld\n", fibonacci[i]);
+			printf("%LA\n", fibonacci[i]);
 
 		else
-			printf("%ld, ", fibonacci[i]);
+			printf("%LA, ", fibonacci[i]);
 
 	}
 
