@@ -15,7 +15,7 @@ int main(void)
 
 	fibonacci[1] = 2;
 
-	printf("%LA, %LA, ", fibonacci[0], fibonacci[1]);
+	printf("%La, %La, ", fibonacci[0], fibonacci[1]);
 
 
 
@@ -26,10 +26,10 @@ int main(void)
 		fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
 
 		if (i == 98)
-			printf("%LA\n", fibonacci[i]);
+			printf("%La\n", fibonacci[i]);
 
 		else
-			printf("%LA, ", fibonacci[i]);
+			printf("%La, ", fibonacci[i]);
 
 	}
 
