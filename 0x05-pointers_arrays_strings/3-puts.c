@@ -19,12 +19,12 @@ void _puts(char *str)
 
 	{
 
-		puts(str[i]);
+		_putchar(str[i]);
 
 		i++;
 
 	}
 
-	puts('\n');
+	_putchar('\n');
 
 }
