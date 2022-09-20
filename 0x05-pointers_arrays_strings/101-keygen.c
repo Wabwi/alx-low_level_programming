@@ -20,11 +20,7 @@ void randPass(int N)
 
 	int randomizer = 0;
 
-	srand((unsigned int)(time(NULL)));
-
-	char numbers[10];
-
-	numbers[10] = "0123456789";
+	char numbers[] = "0123456789";
 
 	char letter[] = "abcdefghijklmnoqprstuvwyzx";
 
@@ -33,6 +29,8 @@ void randPass(int N)
 	char symbols[] = "!@#$^&*?";
 
 	char password[N];
+
+	srand((unsigned int)(time(NULL)));
 
 	randomizer = rand() % 4;
 
