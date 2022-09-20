@@ -22,9 +22,9 @@ void randPass(int N)
 
 	srand((unsigned int)(time(NULL)));
 
-	char numbers[];
+	char numbers[10];
 
-	numbers[] = "0123456789";
+	numbers[10] = "0123456789";
 
 	char letter[] = "abcdefghijklmnoqprstuvwyzx";
 
