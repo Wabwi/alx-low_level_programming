@@ -11,45 +11,44 @@
 char *_strncpy(char *dest, char *src, int n)
 
 {
+	int srclen = 0, i = 0;
 
-	int len1; /* string length for src */
-
-	int len2; /* string length for dest */
-
-	int i;
+	char *temp = dest, *start = src;
 
 
 
-	len1 = 0;
+	while (*src)
 
-	len2 = 0;
+	{
 
+		srclen++;
 
+		src++;
 
-	while (src[len1] != '\0')
-
-		len1++;
-
-
-
-	while (dest[len2] != '\0')
-
-		len2++;
+	}
 
 
 
-	for (i = 0; i < n && src[i] != '\0'; i++)
+	rclen++;
 
-		dest[i] = src[i];
+
+
+	if (n > srclen)
+
+		n = srclen;
+
+
+
+	src = start;
 
 
 
 	for (; i < n; i++)
 
-		dest[i] = '\0';
+		*dest++ = *src++;
 
 
 
-	return (dest);
+	return (temp);
 
 }
