@@ -13,7 +13,6 @@ char *str_concat(char *s1, char *s2)
 {
 	char *new_str, *starts1, *starts2;
 	int i = 0, lens1 = 0, lens2 = 0;
-
 	starts1 = s1;
 	starts2 = s2;
 
@@ -21,7 +20,6 @@ char *str_concat(char *s1, char *s2)
 		s1 = "";
 
 	while (*s1)
-
 	{
 		lens1++;
 		s1++;
@@ -32,7 +30,6 @@ char *str_concat(char *s1, char *s2)
 		s2 = "";
 
 	while (*s2)
-
 	{
 		lens2++;
 		s2++;
@@ -46,23 +43,18 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 
 	for (; i < (lens1 + lens2); i++)
-
 	{
 		if (i < lens1)
-
 		{
 			new_str[i] = *s1;
 			s1++;
 		}
-
 		else
-
 		{
 			new_str[i] = *s2;
 			s2++;
 		}
 	}
-
 	new_str[i] = '\0';
 	return (starts1);
 }
