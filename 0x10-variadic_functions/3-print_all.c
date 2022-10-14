@@ -19,11 +19,11 @@ void print_all(const char * const format, ...)
 
 	va_start(ap, format);
 
-//	while (format == NULL)
-//	{
-//		printf("\n");
-//		return;
-//	}
+	while (format == NULL)
+	{
+		printf("\n");
+		return;
+	}
 
 	while (format[i])
 
