@@ -35,15 +35,15 @@ void print_all(const char * const format, ...)
 		{
 			case 'c':
 				printf("%c", (char) va_arg(ap, int));
-			break;
+				break;
 
 			case 'i':
 				printf("%d", va_arg(ap, int));
-			break;
+				break;
 
 			case 'f':
 				printf("%f", (float) va_arg(ap, double));
-			break;
+				break;
 
 			case 's':
 				temp = va_arg(ap, char*);
