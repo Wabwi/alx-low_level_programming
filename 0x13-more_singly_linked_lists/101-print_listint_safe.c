@@ -1,5 +1,6 @@
 #include "lists.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * print_listint_safe - A function that prints the elementsin a  list
@@ -10,49 +11,37 @@
 size_t print_listint_safe(const listint_t *head)
 
 {
-
-	size_t nodes = 0;
-
-	const listint_t *one = head, *two = head;
-
+	const listint_t *temp = NULL;
+	const listint_t *temp2 = NULL;
+	int i, count;
 
 
-	if (head == NULL)
+	i = 0;
+	temp = head;
 
-		exit(98);
-
-
-
-	while (one && two && two->next && head)
-
+	while (temp)
 	{
+		printf("[%p] %d\n", (void *)temp, temp->n);
+		i++;
+		temp = temp->next;
+		temp2 = head;
+		count = 0;
 
-		one = one->next;
-
-		two = two->next->next;
-
-		if (one == two)
-
+		while (count < i)
 		{
 
-			printf("-> [%p] %d\n", (void *)head, head->n);
-
-			exit(98);
-
+			if (temp == temp2)
+			{
+				printf("-> [%p] %d\n", (void *)temp, temp->n);
+				return (i);
+			}
+			temp2 = temp2->next;
+			count++;
 		}
 
-
-
-		printf("[%p] %d\n", (void *)head, head->n);
-
-		head = head->next;
-
-		nodes++;
+		if (head == NULL)
+			exit(98);
 
 	}
-
-	head = NULL;
-
-	return (nodes);
-
+	return (i);
 }
