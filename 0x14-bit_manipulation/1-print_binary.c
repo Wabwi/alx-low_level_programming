@@ -9,24 +9,26 @@
 void print_binary(unsigned long int n)
 
 {
-	int c = 0;
-	int bit = sizeof(n) * 8 - 1;
+	unsigned int flag = 0, max = 32768; /* 1000 0000 0000 0000 */
 
 
 	if (n == 0)
-		_putchar('0');
-
-
-	while (bit >= 0)
 	{
-		if (n >> bit & 1)
+		_putchar('0');
+		return;
+	}
+
+	while (max)
+	{
+		if (flag == 1 && (n & max) == 0)
+			_putchar('0');
+
+		else if ((n & max) != 0)
 		{
 			_putchar('1');
-			c++;
+			flag = 1;
 		}
 
-		else if (c)
-			_putchar('0');
-			bit--;
+		max >>= 1;
 	}
 }
