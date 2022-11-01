@@ -13,6 +13,8 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	unsigned long int xor = (n ^ m);
 	unsigned long int max = 0x01;
 
+	if (!n || !m)
+		return (0);
 
 	while (max <= xor)
 	{
