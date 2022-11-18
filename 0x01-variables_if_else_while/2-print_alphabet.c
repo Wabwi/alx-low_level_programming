@@ -11,20 +11,23 @@
 int main(void)
 
 {
-
-	char low;
-
+	char a = 'a';
 
 
-	for (low = 'a'; low <= 'z'; low++)
+
+	while (a <= 'z')
+
 	{
 
-		putchar(low);
+		putchar(a);
 
-		putchar('\n');
+		a++;
+
 	}
 
 
+
+	putchar('\n');
 
 	return (0);
 
